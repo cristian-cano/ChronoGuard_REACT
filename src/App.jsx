@@ -1,10 +1,7 @@
-import logoCHG from './components/img/logoCHGcircul.png'
-import gal1 from './components/img/group-people-working-out-business-plan-office.jpg'
-import gal2 from './components/img/guy-shows-document-girl-group-young-freelancers-office-have-conversation-working.jpg'
-import gal3 from './components/img/labor-union-members-working-together.jpg'
-import gal4 from './components/img/people-using-digital-device-while-meeting.jpg'
-import gal5 from './components/img/team-working-together-project.jpg'
 
+import logoCHG from './components/img/logoCHGcircul.png'
+import React, { useState } from 'react';
+import Login from './components/jsx/login';
 import cart1 from './components/img/pngwing.com (5).png'
 import cart2 from './components/img/pngwing.com (8).png'
 import cart3 from './components/img/pngwing.com (9).png'
@@ -12,7 +9,9 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-function App() {
+function index() {
+  const [showLogin, setShowLogin] = useState(false);
+  
   return (
     
     <div className='contenedor'>
@@ -46,37 +45,45 @@ function App() {
                   <a className="nav-link" href="#">Contacto</a>
                 </li>
               </ul>
-              <form className="d-flex" role="search">
-                <input className="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
-                <button className="btn btn-outline-success" type="submit">Buscar</button>
-              </form>
+          
 
 
 
+          
 
-              
-              <div className="botones"> 
+              <div className="botones">
                 <div className="bot">
-                    <svg id="login-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-person-lines-fill" viewBox="0 0 16 16" 
-                    style={{cursor: 'pointer'}}>
-                        <a href="#login-modal"></a>
-                        <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/>
-                      </svg>                      
-            </div>
-            </div> 
+                  <svg 
+              onClick={() => setShowLogin(true)}
+        style={{ cursor: 'pointer', width: '40px', height: '40px' }}
+        fill="currentColor"
+        viewBox="0 0 16 16"
+>
+  <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/>
+      </svg>
+      <Login show={showLogin} onClose={() => setShowLogin(false)} />
+                </div>
+              </div>
+
+              {showLogin && <Login />}
+              
+      
+              
+        
             </div>
           </div>
         </nav>
         </div>
       </header>
       <section className="bienvenido">
-        
-          <img src={gal1} alt="Galería 1" />
-          <img src={gal2} alt="Galería 2" />
-          <img src={gal3} alt="Galería 3" />
-          <img src={gal4} alt="Galería 4" />
-          <img src={gal5} alt="Galería 5" />
-        
+        <div className='card2'>
+          <div className='c-fila1'>
+                
+          </div>
+          <div className='c-fila2'>
+          
+          </div>
+        </div>
       </section>
 
       <div className="tarjetas" id="mascotas">
@@ -115,7 +122,7 @@ function App() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default index

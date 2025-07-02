@@ -1,14 +1,17 @@
 .contenedor{
   --s: 198px; /* control the size*/
-  --c1: #4e6ac1;
-  --c2: #3d425c;
-  --c3: #c2d8f5;
+  --c1: #a3c2b5;
+  --c2: #3d525c;
+  --c3: #ffffff;
   
   background:
     repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c3) 0 50%) 
      calc(var(--s)/2) calc(var(--s)*tan(30deg)/2),
     repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 50%);
   background-size: var(--s) calc(var(--s)*tan(30deg));
+  
+  display: grid;
+  grid: column 6px;;
 }
 #root {
   max-width: 1280px;
@@ -97,7 +100,7 @@ header{
     text-align: center;
     margin: 10px;
     padding: 10px;
-    background: linear-gradient(150deg, rgb(106, 174, 230),rgb(20, 66, 104), rgb(20, 66, 104), rgb(134, 195, 245) ) ;
+    background: linear-gradient(150deg, rgba(33, 126, 133, 0.719),rgb(130, 208, 218), rgba(94, 156, 207, 0.712), rgb(16, 115, 133) ) ;
     max-height: 300px;
 }
 header h2{
@@ -137,7 +140,7 @@ h1{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serifz;
     
 }
-header .botones button{
+header .btn {
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
@@ -157,7 +160,7 @@ header .botones button{
 
 }
 
-.botones button:hover{
+header .btn:hover{
     transform: scale(2.5s);
     background-color: rgb(35, 136, 219);
     color: rgb(255, 255, 255);
@@ -284,7 +287,22 @@ section .bienvenido {
     margin-left: -10%;
     
 }
- 
+
+.login-modal {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+section .bienvenido h2{
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(20, 66, 104);
+    margin-bottom: 20px;
+}
 section img{
     width: 0px;
     flex-grow: 1;
@@ -316,7 +334,6 @@ section .bienvenido h2{
 section .hero h2{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: x-large;
-   
     color: white;
 
 }
@@ -336,7 +353,6 @@ section .hero p{
     width: 100%;
     height: auto;
     gap: 50px;
-   
 }
 
 .card{
@@ -396,13 +412,15 @@ section .hero p{
 }
 
 .container-fluid{
-    background: #a3c2b5;
+    background: #2534419a;
     
     
 }
 
 .navbar-brand{
-    margin-left: 48px;
+    margin-left: 85px;
+    display: flex;
+    flex-flow: nowrap;
 }
 
 .nav-item{
@@ -417,4 +435,5 @@ section .hero p{
     margin-left: 0%;
     margin-right: -34%;
 }
+
 
