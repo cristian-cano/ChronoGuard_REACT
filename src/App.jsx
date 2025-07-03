@@ -9,6 +9,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
+
 function index() {
   const [showLogin, setShowLogin] = useState(false);
   
@@ -75,6 +76,10 @@ function index() {
         </nav>
         </div>
       </header>
+
+      <div className="container">
+        
+      </div>
       <section className="bienvenido">
         <div className='card2'>
           <div className='c-fila1'>
