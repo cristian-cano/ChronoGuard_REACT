@@ -16,6 +16,7 @@ body {
 .contenedor-dashboard {
     display: flex;
     min-height: 100vh;
+    min-width: 100%;
 }
 
 .barra-lateral {

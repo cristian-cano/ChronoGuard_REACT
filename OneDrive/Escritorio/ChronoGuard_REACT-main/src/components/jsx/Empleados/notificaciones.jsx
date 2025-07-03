@@ -8,6 +8,7 @@ const notificaciones = [
 ];
 
 function Notificaciones() {
+  
   return (
     <section style={{ marginBottom: 32 }}>
       <h2>Notificaciones</h2>
