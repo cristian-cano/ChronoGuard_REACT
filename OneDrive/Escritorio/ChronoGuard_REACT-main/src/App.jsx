@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
-function index() {
+function Index() {
   const [showLogin, setShowLogin] = useState(false);
   
   return (
@@ -129,4 +129,4 @@ function index() {
   );
 }
 
-export default index
+export default Index
