@@ -353,6 +353,7 @@ section .hero p{
     width: 100%;
     height: auto;
     gap: 50px;
+    margin-top: 15%;
 }
 
 .card{

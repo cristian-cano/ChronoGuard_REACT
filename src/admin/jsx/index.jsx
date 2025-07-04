@@ -1,19 +1,19 @@
 import React from 'react';
 import logoCHG from '../../components/img/logoCHGcircul.png'; // Ajusta la ruta si es necesario
 import '../css/index.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import '../js/index.js'; // Asegúrate de que este archivo exista y contenga la lógica necesaria
 
 
 function Index() {
-  return (
-    <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div className="container-fluid">
-          <img src={logoCHG} alt="Logo" style={{ width: 40, marginRight: 10 }} />
-          <a className="navbar-brand" href="#">ChronoGuard</a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    return (
+        <div>
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div className="container-fluid">
+                    <img src={logoCHG} alt="Logo" style={{ width: 40, marginRight: 10 }} />
+                    <a className="navbar-brand" href="#">ChronoGuard</a>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">

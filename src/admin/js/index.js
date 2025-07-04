@@ -1,12 +1,14 @@
-import bootstrap from 'bootstrap';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Modal } from 'bootstrap';
 
 document.addEventListener("DOMContentLoaded", () => {
     const agregarEmpleadoBtn = document.querySelector("#empleados .btn-primary");
     const empleadosTable = document.querySelector("#empleados tbody");
 
     // Modales y formularios
-    const modalAgregarEmpleado = new bootstrap.Modal(document.getElementById("modalAgregarEmpleado"));
-    const modalEditarEmpleado = new bootstrap.Modal(document.getElementById("modalEditarEmpleado"));
+    const modalAgregarEmpleado = new Modal(document.getElementById("modalAgregarEmpleado"));
+    const modalEditarEmpleado = new Modal(document.getElementById("modalEditarEmpleado"));
     const formAgregarEmpleado = document.getElementById("formAgregarEmpleado");
     const formEditarEmpleado = document.getElementById("formEditarEmpleado");
 
@@ -95,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const asistenciaTable = document.querySelector("#asistencia tbody");
 
     // Modal y formulario para registrar asistencia
-    const modalRegistrarAsistencia = new bootstrap.Modal(document.getElementById("modalRegistrarAsistencia"));
+    const modalRegistrarAsistencia = new Modal(document.getElementById("modalRegistrarAsistencia"));
     const formRegistrarAsistencia = document.getElementById("formRegistrarAsistencia");
 
     // Abrir el modal al hacer clic en "Registrar Asistencia"
@@ -136,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const generarReporteBtn = document.querySelector("#reportes .btn-info");
 
     // Modal y formulario para generar reportes
-    const modalGenerarReporte = new bootstrap.Modal(document.getElementById("modalGenerarReporte"));
+    const modalGenerarReporte = new Modal(document.getElementById("modalGenerarReporte"));
     const formGenerarReporte = document.getElementById("formGenerarReporte");
 
     // Abrir el modal al hacer clic en "Generar Reporte"

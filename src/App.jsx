@@ -1,4 +1,3 @@
-
 import logoCHG from './components/img/logoCHGcircul.png'
 import React, { useState } from 'react';
 import Login from './components/jsx/login';
@@ -6,16 +5,24 @@ import cart1 from './components/img/pngwing.com (5).png'
 import cart2 from './components/img/pngwing.com (8).png'
 import cart3 from './components/img/pngwing.com (9).png'
 import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import AdminIndex from './admin/jsx/index'
 
-
-function index() {
+function App() {
   const [showLogin, setShowLogin] = useState(false);
   
   return (
     
-    <div className='contenedor'>
+    
+
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/admin" element={<AdminIndex />} />
+      </Routes>
+      <div className='contenedor'>
       <header className="text-center text-white d-flex align-items-center justify-content-center"
       
       >
@@ -80,16 +87,7 @@ function index() {
       <div className="container">
         
       </div>
-      <section className="bienvenido">
-        <div className='card2'>
-          <div className='c-fila1'>
-                
-          </div>
-          <div className='c-fila2'>
-          
-          </div>
-        </div>
-      </section>
+      
 
       <div className="tarjetas" id="mascotas">
         <div className="card">
@@ -127,7 +125,9 @@ function index() {
         </div>
       </div>
     </div>
+    </Router>
+    
   );
 }
 
-export default index
+export default App;
